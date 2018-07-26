@@ -33,20 +33,17 @@ def check_wining_conditions(board, choice):
     # check vertically, same as rows but vertically
     for col in range(7):
         for row in range(3):
-            if board[row][col] == choice and board[row + 1][col] == choice and board[row + 2][col] == choice and \
-                    board[row + 3][col] == choice:
+            if board[row][col] == choice and board[row + 1][col] == choice and board[row + 2][col] == choice and board[row + 3][col] == choice:
                 return True
     # check ascending diagonal
     for col in range(4):
         for row in reversed(range(3)):
-            if board[row][col] == choice and board[row + 1][col + 1] == choice and board[row + 2][col + 2] == choice and \
-                    board[row + 3][col + 3] == choice:
+            if board[row][col] == choice and board[row + 1][col + 1] == choice and board[row + 2][col + 2] == choice and board[row + 3][col + 3] == choice:
                 return True
     # check descending diagonald
     for col in range(4):
         for row in reversed(range(3, 6)):
-            if board[row][col] == choice and board[row - 1][col + 1] == choice and board[row - 2][col + 2] == choice and \
-                    board[row - 3][col + 3] == choice:
+            if board[row][col] == choice and board[row - 1][col + 1] == choice and board[row - 2][col + 2] == choice and board[row - 3][col + 3] == choice:
                 return True
     return False
 
